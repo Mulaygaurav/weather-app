@@ -1,0 +1,124 @@
+/* === Base Styling === */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #663399, #8e44ad); /* RebeccaPurple Gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* === Header === */
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Input and Button === */
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #9370DB; /* Medium purple for contrast */
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 150px;
+}
+
+button:hover {
+  background-color: #7a5eb1;
+}
+
+/* === Weather Card === */
+.weather-card {
+  background-color: #fdfdff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.weather-card h2 {
+  color: #5e35b1;
+  margin-bottom: 15px;
+}
+
+.weather-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* === Responsive Layout for Small Screens === */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+
+  .weather-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .weather-card p {
+    font-size: 1rem;
+  }
+
+  .weather-icon {
+    font-size: 2rem;
+  }
+}

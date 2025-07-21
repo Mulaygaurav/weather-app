@@ -1,0 +1,20 @@
+<div class="app-container">
+  <h1>🌤️ Weather App</h1>
+
+  <div class="search-form">
+    <input type="text" [(ngModel)]="city" placeholder="Enter city" />
+    <button (click)="getWeather()">Get Weather</button>
+  </div>
+
+  <div class="weather-card" *ngIf="weatherData">
+    <h2>{{ weatherData.city }}</h2>
+    <div class="weather-icon">
+      <span>{{ weatherData.emoji }}</span>
+      <span>{{ weatherData.icon }}</span>
+    </div>
+    <p><strong>{{ weatherData.temperature }} ℃</strong></p>
+    <p>{{ weatherData.description }}</p>
+    <p>💧 Humidity: {{ weatherData.humidity }}%</p>
+    <p>🧭 Wind: {{ weatherData.wind }} kph</p>
+  </div>
+</div>
